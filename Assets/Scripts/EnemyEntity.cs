@@ -14,6 +14,8 @@ public class EnemyEntity : MonoBehaviour
     private float EnemyDamage = 10;
     public Vector3 EnemyDeathPos;
 
+    public Animator EnemyAnimations;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +34,11 @@ public class EnemyEntity : MonoBehaviour
 
     public void KillEnemyEntity() {
         bIsAlive = false;
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = DeadEnemy;
+        EnemyAnimations.SetBool("IsHit", true);
+        this.gameObject.GetComponentInChildren<SpriteRenderer>().sprite = DeadEnemy;
+        //this.gameObject.GetComponent<SpriteRenderer>().sprite = DeadEnemy;
+        
+
         Debug.Log("Killed enemy");
     }
 
