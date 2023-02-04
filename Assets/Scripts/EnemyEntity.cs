@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class EnemyEntity : MonoBehaviour
 {
-    // public MouseInteractions MouseInteractionsConnection;
+    public FriendlyEntity FriendlyEntityConnection;
+
+    [SerializeField] Sprite DeadEnemy;
     
     public bool bIsAlive = true;
-    private string EnemyType = "";
+    public string EnemyType = "";
     public double EnemyHealth = 40;
     private float EnemyDamage = 10;
     public Vector3 EnemyDeathPos;
@@ -30,11 +32,14 @@ public class EnemyEntity : MonoBehaviour
 
     public void KillEnemyEntity() {
         bIsAlive = false;
-        //Endre til død mesh
-        Debug.Log("Gungaga");
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = DeadEnemy;
+        Debug.Log("Killed enemy");
     }
 
     public void ReviveEnemyEntity() {
         EnemyDeathPos = transform.position;
+        FriendlyEntityConnection.ReviveEntity(EnemyType, EnemyDeathPos);
+        Destroy(this);
+        Debug.Log("Revived enemy as friendly");
     }
 }

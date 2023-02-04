@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class FriendlyEntity : MonoBehaviour
 {
+    [SerializeField] Sprite ResurrectedHuman;
+    [SerializeField] Sprite ResurrectedDeer;
+
     public bool bIsAlive = true;
     private string FriendlyType = "";
     public double FriendlyHealth = 50;
     private float FriendlyDamage = 15;
-    public Vector3 SpawnFriendlyPos;
+    public Vector3 RevivePos;
 
     // Start is called before the first frame update
     void Start()
@@ -22,11 +25,19 @@ public class FriendlyEntity : MonoBehaviour
         
     }
 
-    void ReviveFriendlyEntity(string tag) {
+    public void ReviveEntity(string tag, Vector3 RevivePos) {
         bIsAlive = true;
         if (tag == "Human")
         {
-            // Spawn friendly entity
+            Instantiate(ResurrectedHuman, RevivePos, Quaternion.identity);
         }
+        else {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = ResurrectedDeer;
+            Debug.Log("Revived friendly");
+        }
+    }
+
+    void MoveToSpot() {
+
     }
 }
