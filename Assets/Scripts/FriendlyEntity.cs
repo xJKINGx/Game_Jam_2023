@@ -5,6 +5,7 @@ using UnityEngine;
 public class FriendlyEntity : MonoBehaviour
 {
     private bool bIsAlive = true;
+
     // Start is called before the first frame update
     void Start()
     {
