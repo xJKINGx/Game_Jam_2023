@@ -180,6 +180,8 @@ MonoBehaviour:
   KeyScriptConnection: {fileID: 1890156190431090764}
   EnemyEntityConnection: {fileID: -7590242322656299288}
   FriendlyEntityConnection: {fileID: -4272148039326291693}
+  ResurrectionScriptConnection: {fileID: 0}
+  KillScriptConnection: {fileID: 0}
   FriendlyMoveToPosValue: {x: 0, y: 0, z: 0}
 --- !u!114 &1890156190431090764
 MonoBehaviour:
@@ -206,13 +208,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09af3afc5d9b45f4bb5254634f67fb45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FriendlyEntityConnection: {fileID: -4272148039326291693}
-  DeadEnemy: {fileID: 21300000, guid: 4855b53912768ee44bf90d53f9d5e56f, type: 3}
   bIsAlive: 1
   EnemyType: 
   EnemyHealth: 40
-  EnemyDeathPos: {x: 0, y: 0, z: 0}
-  EnemyAnimations: {fileID: 1324392871972666236}
+  bababooey: {fileID: 1987802152048605039, guid: 0c5dfa94113e6f24a94e8274914984e0, type: 3}
 --- !u!114 &-4272148039326291693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,11 +224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f945171791ecbac47bf4edb366179569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResurrectedHuman: {fileID: 21300000, guid: e9eb5f75f19d84047be68177b0b27837, type: 3}
-  ResurrectedDeer: {fileID: 21300000, guid: c1db752e1414d3d43a93d0522c805eeb, type: 3}
   bIsAlive: 1
   FriendlyHealth: 50
-  RevivePos: {x: 0, y: 0, z: 0}
 --- !u!95 &1324392871972666236
 Animator:
   serializedVersion: 5

@@ -11,9 +11,9 @@ public class Spawner : MonoBehaviour
     [SerializeField] Transform TreePoint;
     // Start is called before the first frame update
     
-    int num = 20; // Amount of enemies to spawn
+    int num = 30; // Amount of enemies to spawn
     Vector3 point; // The point we spawn around
-    float radius = 30; // How far away they spawn
+    float radius = 50; // How far away they spawn
     
     void Start()
     {
