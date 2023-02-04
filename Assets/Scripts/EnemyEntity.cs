@@ -37,6 +37,7 @@ public class EnemyEntity : MonoBehaviour
         EnemyAnimations.SetBool("IsHit", true);
         this.gameObject.GetComponentInChildren<SpriteRenderer>().sprite = DeadEnemy;
         //this.gameObject.GetComponent<SpriteRenderer>().sprite = DeadEnemy;
+        //EnemyAnimations.SetBool("IsHit", false);
         
 
         Debug.Log("Killed enemy");
