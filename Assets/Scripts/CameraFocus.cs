@@ -21,7 +21,6 @@ public class CameraFocus : MonoBehaviour
             transform.localEulerAngles += new Vector3(0.0f, -Sensitivity, 0.0f);
             //Debug.Log("Gongaga");
         }
-
         transform.position = Target.position - transform.forward * 40.0f;
     }
 }
