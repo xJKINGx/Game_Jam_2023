@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6043024800487412788}
   m_Layer: 0
   m_Name: ResurrectedDeer
-  m_TagString: Untagged
+  m_TagString: ResurrectedDeer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

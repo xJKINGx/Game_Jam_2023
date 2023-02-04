@@ -9,7 +9,7 @@ public class EnemyEntity : MonoBehaviour
     public double EnemyHealth = 40;
     private float EnemyDamage = 10;
 
-    [SerializeField] GameObject bababooey;
+    [SerializeField] GameObject GreatOak;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,10 @@ public class EnemyEntity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, bababooey.transform.position, 1 * Time.deltaTime);
+        if (tag == "Human")
+        {
+            transform.position = Vector3.MoveTowards(transform.position, GreatOak.transform.position, 1 * Time.deltaTime);
+        }
     }
 
     void MoveTowardsTree() {

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Human
   - ResurrectedHuman
+  - DeadAnimalsAtStart
   layers:
   - Default
   - TransparentFX

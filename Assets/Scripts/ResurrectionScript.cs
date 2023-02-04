@@ -25,12 +25,12 @@ public class ResurrectionScript : MonoBehaviour
         ResurrectPos = transform.position;
         if (tag == "Human")
         {
-            Destroy(this);
+            Destroy(gameObject);
             Instantiate(ResurrectedHuman, ResurrectPos, Quaternion.identity);
         }
         else if (tag == "Deer")
         {
-            Destroy(this);
+            Destroy(gameObject);
             Instantiate(ResurrectedDeer, ResurrectPos, Quaternion.identity);
         }
     }

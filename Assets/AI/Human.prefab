@@ -213,7 +213,7 @@ MonoBehaviour:
   bIsAlive: 1
   EnemyType: 
   EnemyHealth: 40
-  bababooey: {fileID: 1987802152048605039, guid: 0c5dfa94113e6f24a94e8274914984e0, type: 3}
+  GreatOak: {fileID: 1987802152048605039, guid: 0c5dfa94113e6f24a94e8274914984e0, type: 3}
 --- !u!114 &-4272148039326291693
 MonoBehaviour:
   m_ObjectHideFlags: 0

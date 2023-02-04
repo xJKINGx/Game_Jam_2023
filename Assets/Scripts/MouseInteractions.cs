@@ -28,7 +28,7 @@ public class MouseInteractions : MonoBehaviour
     void OnMouseDown() {
         if (Input.GetMouseButtonDown(0))
         {
-            if (KeyScriptConnection.CurrentAbility == 1 && tag == "Human")
+            if (KeyScriptConnection.CurrentAbility == 1 && tag == "Human" && EnemyEntityConnection.bIsAlive == true)
             {
                 KillScriptConnection.KillEntity();
             }
