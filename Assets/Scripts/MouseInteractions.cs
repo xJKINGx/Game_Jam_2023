@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class MouseInteractions : MonoBehaviour
 {
     public KeyInteractions KeyScriptConnection;
-    public EnemyEntity EnemyEntityConnection;
+    // public EnemyEntity EnemyEntityConnection;
 
     public Vector3 FriendlyMoveToPosValue;
 
@@ -21,21 +21,11 @@ public class MouseInteractions : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (KeyScriptConnection.CurrentAbility == 1)
-            {
-                // Kill animal
-            }
-            else if (KeyScriptConnection.CurrentAbility == 2)
-            {
-                // Revive animal
-            }
-            else if (KeyScriptConnection.CurrentAbility == 3)
-            {
-                
-            }
+
         }
+
         // MOVEMENT OF FRIENDLIES
-        else if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1))
         {
             Debug.Log("World Pos: " + (Input.mousePosition));
             FriendlyMoveToPosValue = (Input.mousePosition);

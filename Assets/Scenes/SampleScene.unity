@@ -652,6 +652,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1506229388}
   - component: {fileID: 1506229387}
+  - component: {fileID: 1506229390}
+  - component: {fileID: 1506229389}
   m_Layer: 0
   m_Name: Inputs
   m_TagString: Untagged
@@ -671,6 +673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2fe04cb654ac464795cfe2f99d14485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentAbility: 1
 --- !u!4 &1506229388
 Transform:
   m_ObjectHideFlags: 0
@@ -686,3 +689,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1506229389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506229386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09af3afc5d9b45f4bb5254634f67fb45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MouseInteractionsConnection: {fileID: 1506229390}
+--- !u!114 &1506229390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506229386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 550e8e318d0ecfe4da63711ce78b7e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeyScriptConnection: {fileID: 1506229387}
+  FriendlyMoveToPosValue: {x: 0, y: 0, z: 0}

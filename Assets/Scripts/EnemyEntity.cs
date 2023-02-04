@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class EnemyEntity : MonoBehaviour
 {
+    public MouseInteractions MouseInteractionsConnection;
+    
     private bool bIsAlive = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,5 +18,9 @@ public class EnemyEntity : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void KillEnemyEntity() {
+        bIsAlive = false;
     }
 }
