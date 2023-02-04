@@ -8,6 +8,8 @@ public class MouseInteractions : MonoBehaviour
     public KeyInteractions KeyScriptConnection;
     public EnemyEntity EnemyEntityConnection;
     public FriendlyEntity FriendlyEntityConnection;
+    public ResurrectionScript ResurrectionScriptConnection;
+    public KillScript KillScriptConnection;
 
     public Vector3 FriendlyMoveToPosValue;
 
@@ -26,20 +28,16 @@ public class MouseInteractions : MonoBehaviour
     void OnMouseDown() {
         if (Input.GetMouseButtonDown(0))
         {
-            if (KeyScriptConnection.CurrentAbility == 1)
+            if (KeyScriptConnection.CurrentAbility == 1 && tag == "Human")
             {
-                EnemyEntityConnection.KillEnemyEntity();
+                KillScriptConnection.KillEntity();
             }
             
             if (KeyScriptConnection.CurrentAbility == 2)
             {
-                if (tag == "Human" && EnemyEntityConnection.bIsAlive == false)
+                if (FriendlyEntityConnection.bIsAlive == false || EnemyEntityConnection.bIsAlive == false)
                 {
-                    EnemyEntityConnection.ReviveEnemyEntity();
-                }
-                else if (tag != "Human" && FriendlyEntityConnection.bIsAlive == false)
-                {
-                    FriendlyEntityConnection.ReviveEntity(tag, FriendlyEntityConnection.RevivePos);
+                    ResurrectionScriptConnection.ResurrectEntity(tag, ResurrectionScriptConnection.ResurrectPos);
                 }
             }
 
