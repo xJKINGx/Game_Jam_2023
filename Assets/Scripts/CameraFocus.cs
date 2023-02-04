@@ -22,6 +22,6 @@ public class CameraFocus : MonoBehaviour
             //Debug.Log("Gongaga");
         }
 
-        transform.position = Target.position - transform.forward * 10.0f;
+        transform.position = Target.position - transform.forward * 40.0f;
     }
 }
