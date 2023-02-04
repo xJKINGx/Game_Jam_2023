@@ -108,11 +108,13 @@ GameObject:
   - component: {fileID: 4675742305798018806}
   - component: {fileID: 809703457623427898}
   - component: {fileID: 8237379042903906006}
-  - component: {fileID: 409381606324568323}
-  - component: {fileID: 1890156190431090764}
-  - component: {fileID: -7590242322656299288}
-  - component: {fileID: -4272148039326291693}
   - component: {fileID: 1324392871972666236}
+  - component: {fileID: 6071720133442190722}
+  - component: {fileID: 5965868556463727676}
+  - component: {fileID: 3610436637343398868}
+  - component: {fileID: 12226805876784727}
+  - component: {fileID: 1870868988490352720}
+  - component: {fileID: 842419477689235690}
   m_Layer: 0
   m_Name: Human
   m_TagString: Human
@@ -165,71 +167,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 5.5, z: 0.2}
   m_Center: {x: 0, y: -0.36, z: 0}
---- !u!114 &409381606324568323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6288669616820732392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 550e8e318d0ecfe4da63711ce78b7e99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  KeyScriptConnection: {fileID: 1890156190431090764}
-  EnemyEntityConnection: {fileID: -7590242322656299288}
-  FriendlyEntityConnection: {fileID: -4272148039326291693}
-  FriendlyMoveToPosValue: {x: 0, y: 0, z: 0}
---- !u!114 &1890156190431090764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6288669616820732392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2fe04cb654ac464795cfe2f99d14485, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrentAbility: 1
---- !u!114 &-7590242322656299288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6288669616820732392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09af3afc5d9b45f4bb5254634f67fb45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FriendlyEntityConnection: {fileID: -4272148039326291693}
-  DeadEnemy: {fileID: 21300000, guid: 4855b53912768ee44bf90d53f9d5e56f, type: 3}
-  bIsAlive: 1
-  EnemyType: 
-  EnemyHealth: 40
-  EnemyDeathPos: {x: 0, y: 0, z: 0}
-  EnemyAnimations: {fileID: 1324392871972666236}
---- !u!114 &-4272148039326291693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6288669616820732392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f945171791ecbac47bf4edb366179569, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ResurrectedHuman: {fileID: 21300000, guid: e9eb5f75f19d84047be68177b0b27837, type: 3}
-  ResurrectedDeer: {fileID: 21300000, guid: c1db752e1414d3d43a93d0522c805eeb, type: 3}
-  bIsAlive: 1
-  FriendlyHealth: 50
-  RevivePos: {x: 0, y: 0, z: 0}
 --- !u!95 &1324392871972666236
 Animator:
   serializedVersion: 5
@@ -250,3 +187,93 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &6071720133442190722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6288669616820732392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 550e8e318d0ecfe4da63711ce78b7e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeyScriptConnection: {fileID: 5965868556463727676}
+  EnemyEntityConnection: {fileID: 3610436637343398868}
+  FriendlyEntityConnection: {fileID: 12226805876784727}
+  ResurrectionScriptConnection: {fileID: 1870868988490352720}
+  KillScriptConnection: {fileID: 842419477689235690}
+  FriendlyMoveToPosValue: {x: 0, y: 0, z: 0}
+--- !u!114 &5965868556463727676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6288669616820732392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2fe04cb654ac464795cfe2f99d14485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentAbility: 1
+--- !u!114 &3610436637343398868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6288669616820732392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09af3afc5d9b45f4bb5254634f67fb45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bIsAlive: 1
+  EnemyType: 
+  EnemyHealth: 40
+--- !u!114 &12226805876784727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6288669616820732392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f945171791ecbac47bf4edb366179569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bIsAlive: 1
+  FriendlyHealth: 50
+--- !u!114 &1870868988490352720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6288669616820732392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d34f9d11670cab49a8952b8c585e160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResurrectedHuman: {fileID: 0}
+  ResurrectedDeer: {fileID: 0}
+  ResurrectPos: {x: 0, y: 0, z: 0}
+--- !u!114 &842419477689235690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6288669616820732392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4532832302e0d5740aac679dcb7219de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyEntityConnector: {fileID: 0}
+  EnemyAnimations: {fileID: 0}
+  DeadEnemy: {fileID: 0}
