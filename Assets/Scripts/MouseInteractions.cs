@@ -7,6 +7,7 @@ public class MouseInteractions : MonoBehaviour
 {
     public KeyInteractions KeyScriptConnection;
     public EnemyEntity EnemyEntityConnection;
+    public FriendlyEntity FriendlyEntityConnection;
 
     public Vector3 FriendlyMoveToPosValue;
 
@@ -19,16 +20,29 @@ public class MouseInteractions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    void OnMouseDown() {
         if (Input.GetMouseButtonDown(0))
         {
             if (KeyScriptConnection.CurrentAbility == 1)
             {
                 EnemyEntityConnection.KillEnemyEntity();
             }
-            else if (KeyScriptConnection.CurrentAbility == 2 && EnemyEntityConnection.bIsAlive == false)
+            
+            if (KeyScriptConnection.CurrentAbility == 2)
             {
-                EnemyEntityConnection.ReviveEnemyEntity();
+                if (tag == "Human" && EnemyEntityConnection.bIsAlive == false)
+                {
+                    EnemyEntityConnection.ReviveEnemyEntity();
+                }
+                else if (tag != "Human" && FriendlyEntityConnection.bIsAlive == false)
+                {
+                    FriendlyEntityConnection.ReviveEntity(tag, FriendlyEntityConnection.RevivePos);
+                }
             }
+
         }
 
         // MOVEMENT OF FRIENDLIES
