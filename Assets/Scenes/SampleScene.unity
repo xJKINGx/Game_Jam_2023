@@ -229,16 +229,28 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4675742305798018806, guid: b16737cbf87f4b747930965656284a35, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675742305798018806, guid: b16737cbf87f4b747930965656284a35, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675742305798018806, guid: b16737cbf87f4b747930965656284a35, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675742305798018806, guid: b16737cbf87f4b747930965656284a35, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.155854
       objectReference: {fileID: 0}
     - target: {fileID: 4675742305798018806, guid: b16737cbf87f4b747930965656284a35, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.55
+      value: 6.26
       objectReference: {fileID: 0}
     - target: {fileID: 4675742305798018806, guid: b16737cbf87f4b747930965656284a35, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.7191763
+      value: 8.41
       objectReference: {fileID: 0}
     - target: {fileID: 4675742305798018806, guid: b16737cbf87f4b747930965656284a35, type: 3}
       propertyPath: m_LocalRotation.w
@@ -645,6 +657,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1506229388}
   - component: {fileID: 1506229387}
+  - component: {fileID: 1506229389}
   m_Layer: 0
   m_Name: Inputs
   m_TagString: Untagged
@@ -680,6 +693,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1506229389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506229386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 550e8e318d0ecfe4da63711ce78b7e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeyScriptConnection: {fileID: 1506229387}
+  EnemyEntityConnection: {fileID: 0}
+  FriendlyMoveToPosValue: {x: 0, y: 0, z: 0}
 --- !u!1001 &1629384279
 PrefabInstance:
   m_ObjectHideFlags: 0

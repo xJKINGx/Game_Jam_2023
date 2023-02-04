@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class FriendlyEntity : MonoBehaviour
 {
-    private bool bIsAlive = true;
+    public bool bIsAlive = true;
+    private string FriendlyType = "";
+    public double FriendlyHealth = 50;
+    private float FriendlyDamage = 15;
+    public Vector3 SpawnFriendlyPos;
 
     // Start is called before the first frame update
     void Start()
@@ -16,5 +20,13 @@ public class FriendlyEntity : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void ReviveFriendlyEntity(string tag) {
+        bIsAlive = true;
+        if (tag == "Human")
+        {
+            // Spawn friendly entity
+        }
     }
 }

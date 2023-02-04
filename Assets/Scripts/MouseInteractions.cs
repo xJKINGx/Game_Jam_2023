@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class MouseInteractions : MonoBehaviour
 {
     public KeyInteractions KeyScriptConnection;
-    // public EnemyEntity EnemyEntityConnection;
+    public EnemyEntity EnemyEntityConnection;
 
     public Vector3 FriendlyMoveToPosValue;
 
@@ -21,7 +21,14 @@ public class MouseInteractions : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-
+            if (KeyScriptConnection.CurrentAbility == 1)
+            {
+                EnemyEntityConnection.KillEnemyEntity();
+            }
+            else if (KeyScriptConnection.CurrentAbility == 2 && EnemyEntityConnection.bIsAlive == false)
+            {
+                EnemyEntityConnection.ReviveEnemyEntity();
+            }
         }
 
         // MOVEMENT OF FRIENDLIES

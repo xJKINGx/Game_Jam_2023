@@ -25,10 +25,10 @@ public class KeyInteractions : MonoBehaviour
             Debug.Log("Ability 2 selected");
             CurrentAbility = 2;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha3) && CurrentAbility != 3)
+        /*else if (Input.GetKeyDown(KeyCode.Alpha3) && CurrentAbility != 3)
         {
             Debug.Log("Ability 3 selected");
             CurrentAbility = 3;
-        }
+        }*/
     }
 }
