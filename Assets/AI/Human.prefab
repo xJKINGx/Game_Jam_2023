@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 809703457623427898}
   - component: {fileID: 8237379042903906006}
   - component: {fileID: 3208087694026298107}
+  - component: {fileID: 409381606324568323}
+  - component: {fileID: 1200099306970571196}
   m_Layer: 0
   m_Name: Human
   m_TagString: Human
@@ -128,3 +130,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967dfee6004631548a81b48ecaacc184, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &409381606324568323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6288669616820732392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 550e8e318d0ecfe4da63711ce78b7e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeyScriptConnection: {fileID: 0}
+  EnemyEntityConnection: {fileID: 0}
+  FriendlyMoveToPosValue: {x: 0, y: 0, z: 0}
+--- !u!95 &1200099306970571196
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6288669616820732392}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
