@@ -15,6 +15,9 @@ GameObject:
   - component: {fileID: 3208087694026298107}
   - component: {fileID: 409381606324568323}
   - component: {fileID: 1200099306970571196}
+  - component: {fileID: 1890156190431090764}
+  - component: {fileID: -7590242322656299288}
+  - component: {fileID: -4272148039326291693}
   m_Layer: 0
   m_Name: Human
   m_TagString: Human
@@ -78,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f09eae8c0ea04254b90c5386a034a225, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2dbb432b005d9264a8eb5a1fced48cb8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -142,8 +145,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 550e8e318d0ecfe4da63711ce78b7e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KeyScriptConnection: {fileID: 0}
-  EnemyEntityConnection: {fileID: 0}
+  KeyScriptConnection: {fileID: 1890156190431090764}
+  EnemyEntityConnection: {fileID: -7590242322656299288}
+  FriendlyEntityConnection: {fileID: -4272148039326291693}
   FriendlyMoveToPosValue: {x: 0, y: 0, z: 0}
 --- !u!95 &1200099306970571196
 Animator:
@@ -165,3 +169,51 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1890156190431090764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6288669616820732392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2fe04cb654ac464795cfe2f99d14485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentAbility: 1
+--- !u!114 &-7590242322656299288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6288669616820732392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09af3afc5d9b45f4bb5254634f67fb45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FriendlyEntityConnection: {fileID: -4272148039326291693}
+  DeadEnemy: {fileID: 21300000, guid: 4855b53912768ee44bf90d53f9d5e56f, type: 3}
+  bIsAlive: 1
+  EnemyType: 
+  EnemyHealth: 40
+  EnemyDeathPos: {x: 0, y: 0, z: 0}
+--- !u!114 &-4272148039326291693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6288669616820732392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f945171791ecbac47bf4edb366179569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResurrectedHuman: {fileID: 21300000, guid: e9eb5f75f19d84047be68177b0b27837, type: 3}
+  ResurrectedDeer: {fileID: 21300000, guid: c1db752e1414d3d43a93d0522c805eeb, type: 3}
+  bIsAlive: 1
+  FriendlyHealth: 50
+  RevivePos: {x: 0, y: 0, z: 0}
