@@ -23,6 +23,7 @@ public class FriendlyEntity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (Input.GetMouseButtonDown(1))
         {
             FriendlyMoveTo();
@@ -77,7 +78,14 @@ public class FriendlyEntity : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, FriendlyMoveToPosValue, 1 * Time.deltaTime);
         }
-}
+    }
+    void OnCollisionEnter(Collision other) {
+        if (other.gameObject.tag == "Human")
+        {
+            other.gameObject.GetComponent<EnemyEntity>().EnemyHealth -= FriendlyDamage;
+            Debug.Log("Friendly dealth damage to enemy");
+        }  
+    }
 }
 
 
