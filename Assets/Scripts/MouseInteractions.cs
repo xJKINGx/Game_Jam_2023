@@ -32,8 +32,7 @@ public class MouseInteractions : MonoBehaviour
             {
                 KillScriptConnection.KillEntity();
             }
-            
-            if (KeyScriptConnection.CurrentAbility == 2)
+            else if (KeyScriptConnection.CurrentAbility == 2)
             {
                 if (FriendlyEntityConnection.bIsAlive == false || EnemyEntityConnection.bIsAlive == false)
                 {
@@ -42,13 +41,14 @@ public class MouseInteractions : MonoBehaviour
             }
 
         }
-
         // MOVEMENT OF FRIENDLIES
-        if (Input.GetMouseButtonDown(1))
+        else if (Input.GetMouseButtonDown(1))
         {
             Debug.Log("World Pos: " + (Input.mousePosition));
             FriendlyMoveToPosValue = (Input.mousePosition);
             FriendlyMoveToPosValue.y = 0;
+            FriendlyEntityConnection.CurrentMousePosClicked = FriendlyMoveToPosValue;
+            FriendlyEntityConnection.bMoveToPosRecieved = true;
         }
     }
 }
