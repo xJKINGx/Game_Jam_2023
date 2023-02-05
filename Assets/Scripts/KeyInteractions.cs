@@ -6,6 +6,9 @@ public class KeyInteractions : MonoBehaviour
 {
     public int CurrentAbility = 1;
     
+    public AbilityArtSelection SelectionRef;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,16 +22,19 @@ public class KeyInteractions : MonoBehaviour
         {
             Debug.Log("Ability 1 selected");
             CurrentAbility = 1;
+            SelectionRef.MoveSelection(1);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2) && CurrentAbility != 2)
         {
             Debug.Log("Ability 2 selected");
             CurrentAbility = 2;
+            SelectionRef.MoveSelection(2);
         }
-        /*else if (Input.GetKeyDown(KeyCode.Alpha3) && CurrentAbility != 3)
+        else if (Input.GetKeyDown(KeyCode.Alpha3) && CurrentAbility != 3)
         {
             Debug.Log("Ability 3 selected");
             CurrentAbility = 3;
-        }*/
+            SelectionRef.MoveSelection(3);
+        }
     }
 }
