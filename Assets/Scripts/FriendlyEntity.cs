@@ -31,9 +31,6 @@ public class FriendlyEntity : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-            //bMoveToPosRecieved = true;
-            //FriendlyMoveTo();
-
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
@@ -43,25 +40,6 @@ public class FriendlyEntity : MonoBehaviour
                 FriendlyMoveToPosValue = hit.point;
                 bMoveToPosRecieved = true;
             }
-
-            /*Debug.Log("World Pos: " + (Input.mousePosition));
-            FriendlyMoveToPosValue = new Vector3(1,1,1);
-            FriendlyMoveToPosValue = transform.position;
-            FriendlyMoveToPosValue.x = (Input.mousePosition.x);
-            FriendlyMoveToPosValue.z = (Input.mousePosition.z);
-            Debug.Log("No error?");
-
-            /*if (tag != "Human" && tag != "Deer" && bIsAlive == true) 
-            {
-                transform.position = Vector3.MoveTowards(transform.position, FriendlyMoveToPosValue, 4 * Time.deltaTime);
-                Debug.Log("I should be moving");
-            }*/
-
-            /*if (tag != "Human" && tag != "Deer" && bIsAlive == true)
-            {
-               transform.position = Vector3.MoveTowards(transform.position, FriendlyMoveToPosValue, 1 * Time.deltaTime);
-            }*/
-
         }
 
         if (bMoveToPosRecieved)
@@ -69,47 +47,24 @@ public class FriendlyEntity : MonoBehaviour
             FriendlyMoveTo();
         }
 
-        /*if (tag != "Human" && tag != "Deer" && bIsAlive == true)
+        if (FriendlyHealth <= 0)
         {
-            transform.position = Vector3.MoveTowards(transform.position, FriendlyMoveToPosValue, 1 * Time.deltaTime);
-        }*/
-        /*if (bMoveToPosRecieved == true)
-        {
-            if (tag != "Human" || tag != "Deer") 
-            {
-                Debug.Log("I should be moving");
-                transform.position = Vector3.MoveTowards(transform.position, CurrentMousePosClicked, 2 * Time.deltaTime);
-                bMoveToPosRecieved = false;
-            }
-        }*/
+            bIsAlive = false;
+        }
     }
     public void FriendlyMoveTo() {
-
-            //Debug.Log("World Pos: " + (Input.mousePosition));
-
-
-
-            if (tag != "Human" && tag != "Deer" && bIsAlive == true)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, FriendlyMoveToPosValue, 5 * Time.deltaTime);
-            }
-
-            if (FriendlyMoveToPosValue == transform.position)
-            {
-                bMoveToPosRecieved = false;
-                
-            }
-        
-
-        Debug.Log("No error?");
-
-        /*if (tag != "Human" && tag != "Deer" && bIsAlive == true) 
+        if (tag != "Human" && tag != "Deer" && bIsAlive == true)
         {
-            transform.position = Vector3.MoveTowards(transform.position, FriendlyMoveToPosValue, 4 * Time.deltaTime);
-            Debug.Log("I should be moving");
-        }*/
+            transform.position = Vector3.MoveTowards(transform.position, FriendlyMoveToPosValue, 5 * Time.deltaTime);
+        }
 
-
+        if (FriendlyMoveToPosValue == transform.position)
+        {
+            bMoveToPosRecieved = false;
+                
+        }
+        
+        Debug.Log("No error?");
     }
     void OnCollisionEnter(Collision other) {
         if (other.gameObject.tag == "Human")

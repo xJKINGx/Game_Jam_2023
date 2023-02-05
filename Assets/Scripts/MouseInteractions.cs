@@ -9,7 +9,6 @@ public class MouseInteractions : MonoBehaviour
     public EnemyEntity EnemyEntityConnection;
     public FriendlyEntity FriendlyEntityConnection;
     public ResurrectionScript ResurrectionScriptConnection;
-    public KillScript KillScriptConnection;
 
     //public Vector3 FriendlyMoveToPosValue;
 
@@ -30,7 +29,7 @@ public class MouseInteractions : MonoBehaviour
         {
             if (KeyScriptConnection.CurrentAbility == 1 && tag == "Human" && EnemyEntityConnection.bIsAlive == true)
             {
-                KillScriptConnection.KillEntity();
+                EnemyEntityConnection.bIsAlive = false;
             }
             else if (KeyScriptConnection.CurrentAbility == 2)
             {

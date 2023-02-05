@@ -28,6 +28,11 @@ public class EnemyEntity : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, GreatOak.transform.position, 4 * Time.deltaTime);
         }
+
+        if (EnemyHealth <= 0)
+        {
+            bIsAlive = false;
+        }
     }
 
     void OnCollisionEnter(Collision other) {
