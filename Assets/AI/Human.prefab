@@ -107,7 +107,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4675742305798018806}
   - component: {fileID: 809703457623427898}
-  - component: {fileID: 8237379042903906006}
   - component: {fileID: 409381606324568323}
   - component: {fileID: 1890156190431090764}
   - component: {fileID: -7590242322656299288}
@@ -115,6 +114,7 @@ GameObject:
   - component: {fileID: 5176611862721634310}
   - component: {fileID: 1448225420486455328}
   - component: {fileID: 1324392871972666236}
+  - component: {fileID: 1594952652675788635}
   m_Layer: 0
   m_Name: Human
   m_TagString: Human
@@ -154,19 +154,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &8237379042903906006
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6288669616820732392}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 5.5, z: 0.2}
-  m_Center: {x: 0, y: -0.36, z: 0}
 --- !u!114 &409381606324568323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,3 +267,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!136 &1594952652675788635
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6288669616820732392}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 6
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.39, z: 0}
