@@ -30,7 +30,7 @@ public class EnemyEntity : MonoBehaviour
     {
         if (tag == "Human" && bIsAlive == true)
         {
-            transform.position = Vector3.MoveTowards(transform.position, AttackTarget, 20 * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, AttackTarget, 10 * Time.deltaTime);
         }
 
         if (EnemyHealth <= 0)
