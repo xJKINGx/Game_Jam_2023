@@ -10,6 +10,10 @@ public class MouseInteractions : MonoBehaviour
     public FriendlyEntity FriendlyEntityConnection;
     public ResurrectionScript ResurrectionScriptConnection;
 
+    public int Mana = 100;
+    public int MaxMana = 100;
+    public int EnemiesKilled;
+
     //public Vector3 FriendlyMoveToPosValue;
 
     // Start is called before the first frame update
@@ -21,7 +25,10 @@ public class MouseInteractions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Mana < MaxMana)
+        {
+            Mana +=1;
+        }
     }
 
     void OnMouseDown() {
@@ -29,13 +36,25 @@ public class MouseInteractions : MonoBehaviour
         {
             if (KeyScriptConnection.CurrentAbility == 1 && tag == "Human" && EnemyEntityConnection.bIsAlive == true)
             {
-                EnemyEntityConnection.bIsAlive = false;
+                if (Mana >= 10)
+                {
+                    EnemyEntityConnection.bIsAlive = false;
+                }
             }
             else if (KeyScriptConnection.CurrentAbility == 2)
             {
                 if (FriendlyEntityConnection.bIsAlive == false || EnemyEntityConnection.bIsAlive == false)
                 {
-                    ResurrectionScriptConnection.ResurrectEntity(tag, ResurrectionScriptConnection.ResurrectPos);
+                    if (Mana >= 20)
+                    {
+                        ResurrectionScriptConnection.ResurrectEntity(tag, ResurrectionScriptConnection.ResurrectPos);
+                    }
+                }
+            }
+            else if (KeyScriptConnection.CurrentAbility == 3)
+            {
+                if (Mana == 100 && EnemiesKilled >= 20) {
+                    
                 }
             }
 
