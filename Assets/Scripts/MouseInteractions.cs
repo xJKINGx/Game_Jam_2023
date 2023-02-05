@@ -10,6 +10,8 @@ public class MouseInteractions : MonoBehaviour
     public FriendlyEntity FriendlyEntityConnection;
     public ResurrectionScript ResurrectionScriptConnection;
 
+    [SerializeField] GameObject CorpseMech;
+
     public int Mana = 100;
     public int MaxMana = 100;
     public int EnemiesKilled;

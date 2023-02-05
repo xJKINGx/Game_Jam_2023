@@ -9,6 +9,7 @@ TagManager:
   - ResurrectedDeer
   - Deer
   - Tree
+  - CorpseMech
   layers:
   - Default
   - TransparentFX

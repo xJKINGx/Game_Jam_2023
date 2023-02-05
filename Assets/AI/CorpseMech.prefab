@@ -73,6 +73,7 @@ MonoBehaviour:
   EnemyEntityConnection: {fileID: 9035752181518763925}
   FriendlyEntityConnection: {fileID: 8876453843596741862}
   ResurrectionScriptConnection: {fileID: 6363259020185950106}
+  CorpseMech: {fileID: 0}
   Mana: 100
   MaxMana: 100
   EnemiesKilled: 0
@@ -89,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentAbility: 1
+  SelectionRef: {fileID: 0}
 --- !u!114 &9035752181518763925
 MonoBehaviour:
   m_ObjectHideFlags: 0
