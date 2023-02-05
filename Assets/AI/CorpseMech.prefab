@@ -150,10 +150,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4532832302e0d5740aac679dcb7219de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyEntityConnection: {fileID: 0}
-  FriendlyEntityConnection: {fileID: 0}
+  EnemyEntityConnection: {fileID: 9035752181518763925}
+  FriendlyEntityConnection: {fileID: 8876453843596741862}
   EnemyAnimations: {fileID: 8866936493092695924}
-  MouseInteractionsConnection: {fileID: 0}
+  MouseInteractionsConnection: {fileID: 8120262534080138652}
   DeadEnemy: {fileID: 21300000, guid: 4855b53912768ee44bf90d53f9d5e56f, type: 3}
 --- !u!95 &8866936493092695924
 Animator:

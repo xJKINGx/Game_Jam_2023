@@ -54,7 +54,7 @@ public class MouseInteractions : MonoBehaviour
             else if (KeyScriptConnection.CurrentAbility == 3)
             {
                 if (Mana == 100 && EnemiesKilled >= 20) {
-                    
+                    Instantiate(CorpseMech, Input.mousePosition, Quaternion.identity);
                 }
             }
 

@@ -73,7 +73,9 @@ MonoBehaviour:
   EnemyEntityConnection: {fileID: 5832378443076194187}
   FriendlyEntityConnection: {fileID: -5685974426915128456}
   ResurrectionScriptConnection: {fileID: -1282080045618627441}
-  KillScriptConnection: {fileID: 7109600545470036194}
+  Mana: 100
+  MaxMana: 100
+  EnemiesKilled: 0
 --- !u!114 &1353613292862851122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,8 +117,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f945171791ecbac47bf4edb366179569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseInteractionsConnection: {fileID: 0}
+  mouseInteractionsConnection: {fileID: -3756713829919240775}
   bIsAlive: 1
+  FriendlyType: 
   FriendlyHealth: 50
   FriendlyMoveToPosValue: {x: 0, y: 0, z: 0}
   bMoveToPosRecieved: 0
@@ -147,8 +150,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4532832302e0d5740aac679dcb7219de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyEntityConnector: {fileID: 5832378443076194187}
+  EnemyEntityConnection: {fileID: 5832378443076194187}
+  FriendlyEntityConnection: {fileID: -5685974426915128456}
   EnemyAnimations: {fileID: -2141457632662162243}
+  MouseInteractionsConnection: {fileID: -3756713829919240775}
   DeadEnemy: {fileID: 21300000, guid: 4855b53912768ee44bf90d53f9d5e56f, type: 3}
 --- !u!95 &-2141457632662162243
 Animator:
