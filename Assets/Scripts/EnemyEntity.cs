@@ -26,7 +26,7 @@ public class EnemyEntity : MonoBehaviour
     {
         if (tag == "Human" && bIsAlive == true)
         {
-            transform.position = Vector3.MoveTowards(transform.position, GreatOak.transform.position, 1 * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, GreatOak.transform.position, 4 * Time.deltaTime);
         }
     }
 }

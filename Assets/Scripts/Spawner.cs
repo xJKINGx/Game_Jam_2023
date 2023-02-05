@@ -13,7 +13,7 @@ public class Spawner : MonoBehaviour
     
     int num = 30; // Amount of enemies to spawn
     Vector3 point; // The point we spawn around
-    float radius = 50; // How far away they spawn
+    float radius = 120; // How far away they spawn
     
     void Start()
     {

@@ -11,7 +11,7 @@ public class MouseInteractions : MonoBehaviour
     public ResurrectionScript ResurrectionScriptConnection;
     public KillScript KillScriptConnection;
 
-    public Vector3 FriendlyMoveToPosValue;
+    //public Vector3 FriendlyMoveToPosValue;
 
     // Start is called before the first frame update
     void Start()
@@ -40,15 +40,6 @@ public class MouseInteractions : MonoBehaviour
                 }
             }
 
-        }
-        // MOVEMENT OF FRIENDLIES
-        else if (Input.GetMouseButtonDown(1))
-        {
-            Debug.Log("World Pos: " + (Input.mousePosition));
-            FriendlyMoveToPosValue = (Input.mousePosition);
-            FriendlyMoveToPosValue.y = 0;
-            FriendlyEntityConnection.CurrentMousePosClicked = FriendlyMoveToPosValue;
-            FriendlyEntityConnection.bMoveToPosRecieved = true;
         }
     }
 }

@@ -52,8 +52,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
+  m_UseGravity: 1
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -69,7 +69,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2, y: 5.5, z: 0.2}
-  m_Center: {x: 0, y: -0.36, z: 0}
+  m_Center: {x: -0.3, y: -0.36, z: 0}
 --- !u!114 &-6945908085381663911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,7 +87,6 @@ MonoBehaviour:
   FriendlyEntityConnection: {fileID: -9171169415659702567}
   ResurrectionScriptConnection: {fileID: -2508262408601597064}
   KillScriptConnection: {fileID: 4063662602690011341}
-  FriendlyMoveToPosValue: {x: 0, y: 0, z: 0}
 --- !u!114 &-8788595550490229790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,9 +128,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f945171791ecbac47bf4edb366179569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseInteractionsConnection: {fileID: 0}
   bIsAlive: 1
   FriendlyHealth: 50
-  CurrentMousePosClicked: {x: 0, y: 0, z: 0}
+  FriendlyMoveToPosValue: {x: 0, y: 0, z: 0}
   bMoveToPosRecieved: 0
 --- !u!114 &-2508262408601597064
 MonoBehaviour:
