@@ -45,7 +45,7 @@ public class EnemyEntity : MonoBehaviour
             other.gameObject.GetComponent<FriendlyEntity>().FriendlyHealth -= EnemyDamage;
             Debug.Log("Enemy dealt damage to friendly");
         }
-        if (other.gameObject.tag == "Tree")
+        if (other.gameObject.tag == "Tree" && tag == "Human")
         {
             other.gameObject.GetComponent<TreeLogic>().TreeHealth--;
             Destroy(gameObject);
