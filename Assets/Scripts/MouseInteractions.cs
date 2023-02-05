@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public class MouseInteractions : MonoBehaviour
 {
@@ -13,21 +14,35 @@ public class MouseInteractions : MonoBehaviour
 
     public Vector3 FriendlyMoveToPosValue;
 
+    Camera cam;
     // Start is called before the first frame update
     void Start()
     {
+        cam = Camera.main;
+        MouseHandler.instance.onSetNewGoal.AddListener( OnSetNewGoal);
+    }
+
+    private void OnDestroy() {
+         MouseHandler.instance.onSetNewGoal.RemoveListener( OnSetNewGoal);
+    }
+
+    private void OnSetNewGoal(Vector3 newPos){
+        Debug.Log("Message REceived");
+        GetComponent<FriendlyEntity>().bMoveToPosRecieved = true;
+        GetComponent<FriendlyEntity>().CurrentMousePosClicked = newPos;
+        
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
 
-    void OnMouseDown() {
-        if (Input.GetMouseButtonDown(0))
+        
+return;
+         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            Debug.Log("awdawdawd");
             if (KeyScriptConnection.CurrentAbility == 1 && tag == "Human" && EnemyEntityConnection.bIsAlive == true)
             {
                 KillScriptConnection.KillEntity();
@@ -42,7 +57,7 @@ public class MouseInteractions : MonoBehaviour
 
         }
         // MOVEMENT OF FRIENDLIES
-        else if (Input.GetMouseButtonDown(1))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             Debug.Log("World Pos: " + (Input.mousePosition));
             FriendlyMoveToPosValue = (Input.mousePosition);
@@ -50,5 +65,9 @@ public class MouseInteractions : MonoBehaviour
             FriendlyEntityConnection.CurrentMousePosClicked = FriendlyMoveToPosValue;
             FriendlyEntityConnection.bMoveToPosRecieved = true;
         }
+    }
+
+    void OnMouseDown() {
+       
     }
 }

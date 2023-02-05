@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -5885201103355956638}
   - component: {fileID: 7624202326143221447}
   - component: {fileID: 6043024800487412788}
+  - component: {fileID: 1111117304495511494}
   m_Layer: 0
   m_Name: ResurrectedDeer
   m_TagString: ResurrectedDeer
@@ -115,3 +116,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &1111117304495511494
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919079556579142633}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 3.5008547
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
