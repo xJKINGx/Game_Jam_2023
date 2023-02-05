@@ -8,7 +8,7 @@ public class FriendlyEntity : MonoBehaviour
 
     public bool bIsAlive = true;
     //public bool bFriendlyIsAllowedToMove = false;
-    private string FriendlyType = "";
+    public string FriendlyType = "";
     public double FriendlyHealth = 50;
     private float FriendlyDamage = 15;
     public Vector3 FriendlyMoveToPosValue;

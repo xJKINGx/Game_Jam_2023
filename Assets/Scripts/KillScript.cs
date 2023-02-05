@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class KillScript : MonoBehaviour
 {
-    public EnemyEntity EnemyEntityConnector; 
-    public FriendlyEntity FriendlyEntityConnector;
+    public EnemyEntity EnemyEntityConnection; 
+    public FriendlyEntity FriendlyEntityConnection;
     public Animator EnemyAnimations;
+    public MouseInteractions MouseInteractionsConnection;
 
     [SerializeField] Sprite DeadEnemy;
 
@@ -19,16 +20,17 @@ public class KillScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (EnemyEntityConnector.bIsAlive == false || FriendlyEntityConnector.bIsAlive == false)
+        if (EnemyEntityConnection.bIsAlive == false || FriendlyEntityConnection.bIsAlive == false)
         {
             KillEntity();
         }
     }
 
     public void KillEntity() {
-        EnemyEntityConnector.bIsAlive = false;
+        EnemyEntityConnection.bIsAlive = false;
         EnemyAnimations.SetBool("IsHit", true);
         this.gameObject.GetComponentInChildren<SpriteRenderer>().sprite = DeadEnemy;
         Debug.Log("Killed enemy");
+        MouseInteractionsConnection.EnemiesKilled += 1;
     }
 }

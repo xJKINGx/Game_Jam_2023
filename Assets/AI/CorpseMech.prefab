@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6202668291019950611}
-  - component: {fileID: 6149664629269828205}
   - component: {fileID: 5530851942534990797}
   - component: {fileID: 8120262534080138652}
   - component: {fileID: -5758162159024579513}
@@ -18,8 +17,9 @@ GameObject:
   - component: {fileID: 6363259020185950106}
   - component: {fileID: -6812332589928392198}
   - component: {fileID: 8866936493092695924}
+  - component: {fileID: 5751028372279568368}
   m_Layer: 0
-  m_Name: Wooden Amalgamation
+  m_Name: CorpseMech
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,19 +41,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6149664629269828205
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7824858288591477458}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &5530851942534990797
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -86,7 +73,9 @@ MonoBehaviour:
   EnemyEntityConnection: {fileID: 9035752181518763925}
   FriendlyEntityConnection: {fileID: 8876453843596741862}
   ResurrectionScriptConnection: {fileID: 6363259020185950106}
-  KillScriptConnection: {fileID: -6812332589928392198}
+  Mana: 100
+  MaxMana: 100
+  EnemiesKilled: 0
 --- !u!114 &-5758162159024579513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,6 +119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseInteractionsConnection: {fileID: 8120262534080138652}
   bIsAlive: 1
+  FriendlyType: 
   FriendlyHealth: 50
   FriendlyMoveToPosValue: {x: 0, y: 0, z: 0}
   bMoveToPosRecieved: 0
@@ -160,8 +150,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4532832302e0d5740aac679dcb7219de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyEntityConnector: {fileID: 9035752181518763925}
+  EnemyEntityConnection: {fileID: 0}
+  FriendlyEntityConnection: {fileID: 0}
   EnemyAnimations: {fileID: 8866936493092695924}
+  MouseInteractionsConnection: {fileID: 0}
   DeadEnemy: {fileID: 21300000, guid: 4855b53912768ee44bf90d53f9d5e56f, type: 3}
 --- !u!95 &8866936493092695924
 Animator:
@@ -183,6 +175,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!136 &5751028372279568368
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7824858288591477458}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 2.25
+  m_Height: 7
+  m_Direction: 0
+  m_Center: {x: 0, y: -0.3, z: 0}
 --- !u!1 &8512275790682765624
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,14 +275,14 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 1ba553cbd213bf74e951798c9487c941, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 6.976, y: 5.46}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0

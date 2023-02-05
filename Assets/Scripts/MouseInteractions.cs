@@ -11,6 +11,8 @@ public class MouseInteractions : MonoBehaviour
     public ResurrectionScript ResurrectionScriptConnection;
 
     public int Mana = 100;
+    public int MaxMana = 100;
+    public int EnemiesKilled;
 
     //public Vector3 FriendlyMoveToPosValue;
 
@@ -23,7 +25,10 @@ public class MouseInteractions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Mana +=1;
+        if (Mana < MaxMana)
+        {
+            Mana +=1;
+        }
     }
 
     void OnMouseDown() {
@@ -44,6 +49,12 @@ public class MouseInteractions : MonoBehaviour
                     {
                         ResurrectionScriptConnection.ResurrectEntity(tag, ResurrectionScriptConnection.ResurrectPos);
                     }
+                }
+            }
+            else if (KeyScriptConnection.CurrentAbility == 3)
+            {
+                if (Mana == 100 && EnemiesKilled >= 20) {
+                    
                 }
             }
 
