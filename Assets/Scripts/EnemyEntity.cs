@@ -26,7 +26,15 @@ public class EnemyEntity : MonoBehaviour
     {
         if (tag == "Human" && bIsAlive == true)
         {
-            transform.position = Vector3.MoveTowards(transform.position, GreatOak.transform.position, 1 * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, GreatOak.transform.position, 4 * Time.deltaTime);
         }
+    }
+
+    void OnCollisionEnter(Collision other) {
+        if (other.gameObject.tag != "Human" && other.gameObject.tag != "Deer")
+        {
+            other.gameObject.GetComponent<FriendlyEntity>().FriendlyHealth -= EnemyDamage;
+            Debug.Log("Enemy dealt damage to friendly");
+        }  
     }
 }
