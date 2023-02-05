@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
+
+    public GameObject controlCanvas, mainMenuCanvas;
+    
+    public void Start() {
+        LoadMainMenu();
+    }
+
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -13,7 +20,13 @@ public class MainMenuScript : MonoBehaviour
 
     public void LoadControls()
     {
+        mainMenuCanvas.SetActive(false);
+        controlCanvas.SetActive(true);
+    }
 
+    public void LoadMainMenu() {
+        mainMenuCanvas.SetActive(true);
+        controlCanvas.SetActive(false);
     }
 
     public void ExitGame()
