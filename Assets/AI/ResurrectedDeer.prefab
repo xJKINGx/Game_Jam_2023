@@ -12,6 +12,13 @@ GameObject:
   - component: {fileID: -5885201103355956638}
   - component: {fileID: 7624202326143221447}
   - component: {fileID: 6043024800487412788}
+  - component: {fileID: -3756713829919240775}
+  - component: {fileID: 1353613292862851122}
+  - component: {fileID: 5832378443076194187}
+  - component: {fileID: -5685974426915128456}
+  - component: {fileID: -1282080045618627441}
+  - component: {fileID: 7109600545470036194}
+  - component: {fileID: -2141457632662162243}
   m_Layer: 0
   m_Name: ResurrectedDeer
   m_TagString: ResurrectedDeer
@@ -115,3 +122,116 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-3756713829919240775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919079556579142633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 550e8e318d0ecfe4da63711ce78b7e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeyScriptConnection: {fileID: 1353613292862851122}
+  EnemyEntityConnection: {fileID: 5832378443076194187}
+  FriendlyEntityConnection: {fileID: -5685974426915128456}
+  ResurrectionScriptConnection: {fileID: -1282080045618627441}
+  KillScriptConnection: {fileID: 7109600545470036194}
+  FriendlyMoveToPosValue: {x: 0, y: 0, z: 0}
+--- !u!114 &1353613292862851122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919079556579142633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2fe04cb654ac464795cfe2f99d14485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentAbility: 1
+--- !u!114 &5832378443076194187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919079556579142633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09af3afc5d9b45f4bb5254634f67fb45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bIsAlive: 1
+  EnemyType: 
+  EnemyHealth: 40
+  GreatOak: {fileID: 1987802152048605039, guid: 0c5dfa94113e6f24a94e8274914984e0, type: 3}
+--- !u!114 &-5685974426915128456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919079556579142633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f945171791ecbac47bf4edb366179569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bIsAlive: 1
+  FriendlyHealth: 50
+  CurrentMousePosClicked: {x: 0, y: 0, z: 0}
+  bMoveToPosRecieved: 0
+--- !u!114 &-1282080045618627441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919079556579142633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d34f9d11670cab49a8952b8c585e160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResurrectedHuman: {fileID: 1695504595995825660, guid: 99b3534ec61802340889b826f49526a8, type: 3}
+  ResurrectedDeer: {fileID: 919079556579142633}
+  ResurrectPos: {x: 0, y: 0, z: 0}
+--- !u!114 &7109600545470036194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919079556579142633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4532832302e0d5740aac679dcb7219de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyEntityConnector: {fileID: 5832378443076194187}
+  EnemyAnimations: {fileID: -2141457632662162243}
+  DeadEnemy: {fileID: 21300000, guid: 4855b53912768ee44bf90d53f9d5e56f, type: 3}
+--- !u!95 &-2141457632662162243
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919079556579142633}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
