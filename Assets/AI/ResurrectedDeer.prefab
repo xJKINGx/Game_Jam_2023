@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 344878168254646038}
-  - component: {fileID: 7624202326143221447}
   - component: {fileID: 6043024800487412788}
   - component: {fileID: -3756713829919240775}
   - component: {fileID: 1353613292862851122}
@@ -18,6 +17,7 @@ GameObject:
   - component: {fileID: -1282080045618627441}
   - component: {fileID: 7109600545470036194}
   - component: {fileID: -2141457632662162243}
+  - component: {fileID: 7113180741504973844}
   m_Layer: 0
   m_Name: ResurrectedDeer
   m_TagString: ResurrectedDeer
@@ -41,19 +41,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &7624202326143221447
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919079556579142633}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5, y: 4, z: 0.2}
-  m_Center: {x: 0.5, y: 0.75, z: 0}
 --- !u!54 &6043024800487412788
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -183,6 +170,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!136 &7113180741504973844
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919079556579142633}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 2
+  m_Height: 5
+  m_Direction: 0
+  m_Center: {x: 0.3, y: 0.75, z: -1}
 --- !u!1 &6469009156520800995
 GameObject:
   m_ObjectHideFlags: 0
