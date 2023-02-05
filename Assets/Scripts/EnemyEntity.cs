@@ -32,6 +32,11 @@ public class EnemyEntity : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, AttackTarget, 20 * Time.deltaTime);
         }
+
+        if (EnemyHealth <= 0)
+        {
+            bIsAlive = false;
+        }
     }
 
     void OnCollisionEnter(Collision other) {

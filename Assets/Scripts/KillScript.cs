@@ -5,6 +5,7 @@ using UnityEngine;
 public class KillScript : MonoBehaviour
 {
     public EnemyEntity EnemyEntityConnector; 
+    public FriendlyEntity FriendlyEntityConnector;
     public Animator EnemyAnimations;
 
     [SerializeField] Sprite DeadEnemy;
@@ -18,7 +19,10 @@ public class KillScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (EnemyEntityConnector.bIsAlive == false || FriendlyEntityConnector.bIsAlive == false)
+        {
+            KillEntity();
+        }
     }
 
     public void KillEntity() {
