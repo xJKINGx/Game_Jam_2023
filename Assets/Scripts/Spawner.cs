@@ -47,7 +47,7 @@ public class Spawner : MonoBehaviour
         enemy.transform.LookAt(point);
    
         /* Adjust height */
-        enemy.transform.Translate(new Vector3(0, enemy.transform.localScale.y / 2, 0));
+        enemy.transform.Translate(new Vector3(0, enemy.transform.localScale.y / 2 + 1, 0));
     }
     // Update is called once per frame
     void Update()
