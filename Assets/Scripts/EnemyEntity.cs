@@ -24,13 +24,9 @@ public class EnemyEntity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (tag == "Human")
+        if (tag == "Human" && bIsAlive == true)
         {
             transform.position = Vector3.MoveTowards(transform.position, GreatOak.transform.position, 1 * Time.deltaTime);
         }
-    }
-
-    void MoveTowardsTree() {
-        
     }
 }
