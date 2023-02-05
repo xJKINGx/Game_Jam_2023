@@ -1788,6 +1788,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1194172018 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1987802152048605039, guid: 0c5dfa94113e6f24a94e8274914984e0, type: 3}
+  m_PrefabInstance: {fileID: 1987802153368017258}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1456392976
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,6 +1896,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1987802152048605027, guid: 0c5dfa94113e6f24a94e8274914984e0, type: 3}
   m_PrefabInstance: {fileID: 1987802153368017258}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1474096654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194172018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d1e28c6fb40014c8a58b24c2b828a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TreeHealth: 10
 --- !u!1 &1506229386
 GameObject:
   m_ObjectHideFlags: 0
@@ -2754,6 +2772,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1987802152048605039, guid: 0c5dfa94113e6f24a94e8274914984e0, type: 3}
       propertyPath: m_Name
+      value: Tree
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987802152048605039, guid: 0c5dfa94113e6f24a94e8274914984e0, type: 3}
+      propertyPath: m_TagString
       value: Tree
       objectReference: {fileID: 0}
     m_RemovedComponents: []

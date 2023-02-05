@@ -11,9 +11,13 @@ public class EnemyEntity : MonoBehaviour
 
     [SerializeField] GameObject GreatOak;
 
+    Vector3 AttackTarget;
+
     // Start is called before the first frame update
     void Start()
     {
+        AttackTarget = GreatOak.transform.position;
+        AttackTarget.y += 3;
         if (EnemyType == "Flame")
         {
             EnemyHealth = EnemyHealth*1.75;
@@ -26,15 +30,20 @@ public class EnemyEntity : MonoBehaviour
     {
         if (tag == "Human" && bIsAlive == true)
         {
-            transform.position = Vector3.MoveTowards(transform.position, GreatOak.transform.position, 4 * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, AttackTarget, 20 * Time.deltaTime);
         }
     }
 
     void OnCollisionEnter(Collision other) {
-        if (other.gameObject.tag != "Human" && other.gameObject.tag != "Deer")
+        if (other.gameObject.tag != "Human" && other.gameObject.tag != "Deer" && other.gameObject.tag != "Tree")
         {
             other.gameObject.GetComponent<FriendlyEntity>().FriendlyHealth -= EnemyDamage;
             Debug.Log("Enemy dealt damage to friendly");
+        }
+        if (other.gameObject.tag == "Tree")
+        {
+            other.gameObject.GetComponent<TreeLogic>().TreeHealth--;
+            Destroy(gameObject);
         }  
     }
 }
