@@ -18,6 +18,7 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         point = TreePoint.position;
+        point.y += 2;
         /*
         float x = seconds before the first invoke;
         float y = seconds between every invoke;
@@ -47,7 +48,7 @@ public class Spawner : MonoBehaviour
         enemy.transform.LookAt(point);
    
         /* Adjust height */
-        enemy.transform.Translate(new Vector3(0, enemy.transform.localScale.y / 2 + 1, 0));
+        enemy.transform.Translate(new Vector3(0, enemy.transform.localScale.y / 2 + 2, 0));
     }
     // Update is called once per frame
     void Update()
